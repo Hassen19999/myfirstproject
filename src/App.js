@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Profile from './compoment/Profile';
+import './App.css'
+
+function handleName(name) {
+  alert(`Hello, my name is ${name}`);
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile
+              fullName="hassen kaffel"
+              bio="I am a web developer"
+              profession="React Developer"
+              handleName={handleName}/>
+              <img src="https://st3.depositphotos.com/27847728/33245/v/450/depositphotos_332451796-stock-illustration-letter-logo-design-vector-template.jpg" alt="Profile picture" />
     </div>
   );
 }
